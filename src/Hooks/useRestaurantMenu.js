@@ -54,7 +54,7 @@ const extractSections = (cards) => {
   const fetchData = async () => {
     try {
       const response = await fetch(
-        `https://proxy.corsfix.com/?https://www.swiggy.com/mapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=21.99740&lng=79.00110&restaurantId=${resId}&submitAction=ENTER`
+        `https://www.swiggy.com/mapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=21.99740&lng=79.00110&restaurantId=${resId}&submitAction=ENTER`
       );
       const jsonData = await response.json();
       const allCards = jsonData?.data?.cards || [];
