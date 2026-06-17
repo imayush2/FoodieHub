@@ -26,6 +26,15 @@ const Cart = () => {
     );
   }
 
+  const totalAmount = items.reduce((total, item) => {
+    return total + (item.price || 0);
+  }, 0);
+
+  const handlePlaceOrder = () => {
+    alert("Order placed successfully!");
+    dispatch(clearCart());
+  };
+
   return (
     <div className="max-w-4xl mx-auto p-6">
       <h1 className="text-2xl font-bold mb-6">Your Cart</h1>
@@ -80,6 +89,29 @@ const Cart = () => {
             </button>
           </div>
         ))}
+      </div>
+
+      <div className="mt-8 p-6 bg-gray-100 rounded-lg shadow">
+        <h2 className="text-xl font-bold mb-4">Order Summary</h2>
+
+        <div className="flex justify-between mb-3">
+          <span>Total Items</span>
+
+          <span>{items.length}</span>
+        </div>
+
+        <div className="flex justify-between mb-5 text-lg font-semibold">
+          <span>Total Amount</span>
+
+          <span>₹{totalAmount / 100}</span>
+        </div>
+
+        <button
+          onClick={handlePlaceOrder}
+          className="w-full bg-orange-500 text-white py-3 rounded-lg hover:bg-orange-600"
+        >
+          Place Order
+        </button>
       </div>
     </div>
   );

@@ -91,12 +91,12 @@ const Header = () => {
                     ? setBtnName("Logout")
                     : setBtnName("Login")
                 }
-                className="bg-red-500 text-white px-3 py-1.5 rounded-md text-sm hover:bg-red-600 transition-colors duration-200"
+                className="bg-gray-500 text-white px-3 py-1.5 rounded-md text-sm transition-colors duration-200"
               >
                 {btnName}
               </button>
             </li>
-            <li className="text-gray-700 hover:text-red-500 dark:text-white transition-colors duration-200">
+            <li className="text-gray-700 dark:text-white transition-colors duration-200">
               {data.loggedInUser}
             </li>
           </ul>

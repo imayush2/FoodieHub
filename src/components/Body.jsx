@@ -43,7 +43,7 @@ const Body = () => {
           className="border border-gray-300 rounded-lg px-4 py-2 w-full max-w-md focus:outline-none focus:ring-2 focus:ring-red-400"
         />
         <button
-          className="bg-green-500 text-white px-4 py-2 rounded-lg "
+          className=" bg-orange-500 text-white px-4 py-2 rounded-lg "
           onClick={() => {
             setFilterList(
               restaurantList.filter((res) => {
